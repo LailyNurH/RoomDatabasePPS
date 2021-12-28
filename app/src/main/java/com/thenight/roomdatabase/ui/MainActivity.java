@@ -1,24 +1,9 @@
 package com.thenight.roomdatabase.ui;
 
-import static com.thenight.roomdatabase.database.db.MyApp.db;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,11 +14,8 @@ import com.thenight.roomdatabase.database.dao.MahasiswaDao;
 import com.thenight.roomdatabase.database.db.MyApp;
 import com.thenight.roomdatabase.database.entity.Mahasiswa;
 
-import java.io.File;
-import java.io.IOException;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText etNama, etNim, etKejuruan, etAlamat;
+    EditText etNama, etNim;
     public final static String TAG_DATA_INTENT = "data_mahasiswa";
     private Mahasiswa mahasiswa;
     private MahasiswaDao dao;
